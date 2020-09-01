@@ -1,0 +1,24 @@
+
+#navItem {
+    text-align: center;
+}
+#menunav {
+    border: 1px solid #cfddea;
+}
+@media all and (max-width: 576px){
+    #menunav{
+        line-height: 32px;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #navItem{
+        margin: 0; 
+    }
+    #navlinka {
+        color: black;
+    }
+    #menunav .ant-menu-item-selected {
+        color: #1890ff !important;
+    }
+}

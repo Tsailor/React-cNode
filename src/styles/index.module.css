@@ -1,0 +1,47 @@
+/*所有和网页结构布局相关的样式*/
+/*以及全局样式*/
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body {
+    height: 100%;
+}
+:global(#root){
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#Header{
+    height: 64px;
+}
+#Content {
+    flex: 1;
+    padding: 0 50px;
+}
+#Footer {
+    text-align: center;
+    width: 100%;
+}
+#wrap {
+    background: #001529;
+    color: #fff;
+    line-height: 63px;
+}
+:global(.ant-menu-horizontal > .ant-menu-item a:hover){
+    color: #1890ff !important;
+}
+:global(.ant-menu-horizontal > .ant-menu-item-selected a){
+    color:#1890ff !important;
+}
+@media all and (max-width: 576px){
+    #Content {
+        padding: 0;
+    }
+    :global(.ant-menu-item-selected a){
+        color: #1890ff !important;
+    }
+    :global(.ant-menu-item-selected a:hover){
+        color: #1890ff !important;
+    }
+}
