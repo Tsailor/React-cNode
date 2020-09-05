@@ -22,6 +22,7 @@ html,body {
 #Footer {
     text-align: center;
     width: 100%;
+    margin-top: 30px;
 }
 #wrap {
     background: #001529;
@@ -34,6 +35,9 @@ html,body {
 :global(.ant-menu-horizontal > .ant-menu-item-selected a){
     color:#1890ff !important;
 }
+:global(.ant-pagination){
+    margin: 30px 0 !important;
+}
 @media all and (max-width: 576px){
     #Content {
         padding: 0;
@@ -43,5 +47,12 @@ html,body {
     }
     :global(.ant-menu-item-selected a:hover){
         color: #1890ff !important;
+    }
+    :global(.ant-card-type-inner .ant-card-body ){
+        padding: 8px !important;
+    }
+    #Footer {
+        padding: 10px 8px;
+        margin-top: 30px;
     }
 }

@@ -4,9 +4,10 @@ import Book from "../components/book/Book";
 import About from "../components/about/About";
 import Error from "../components/Error"
 import IndexPage from "../components/index/IndexPage";
+import Detail from "../components/details/Detail"
 import { HomeOutlined ,AppstoreOutlined,FundOutlined } from '@ant-design/icons';
-import { PicRightOutlined, IssuesCloseOutlined, ContactsOutlined, ForkOutlined, RotateRightOutlined} from '@ant-design/icons';
-const URLTYPES = ["all", "good", "share", "job", "ask"]
+import { PicRightOutlined, IssuesCloseOutlined, ContactsOutlined, ForkOutlined, RotateRightOutlined, RadarChartOutlined } from '@ant-design/icons';
+const URLTYPES = ["all", "good", "share", "job", "ask","dev"]
 const urlLists = [    // 用户输入url，
     {
         path: "/",
@@ -35,9 +36,9 @@ const urlLists = [    // 用户输入url，
             return URLTYPES.indexOf(tab) !== -1 ? <IndexPage {...props} /> : <Error {...props}/> 
         }
     },{
-        path: "/details/:tab",
+        path: "/detail/:tab",
         exact: true,
-        render: (props)=><Details {...props} />
+        render: (props)=><Detail {...props} />
     },{
         path: "*",
         exact: true,
@@ -90,7 +91,13 @@ const IndexPageLists = [
         name:"问答",
         path: "/index/ask",
         exact: true,
-        icontype: <RotateRightOutlined />
+        icontype: <RotateRightOutlined /> 
+    },
+    {
+        name:"测试",
+        path: "/index/dev",
+        exact: true,
+        icontype: <RadarChartOutlined /> 
     }
 ]
 export { urlLists, navlists, IndexPageLists };

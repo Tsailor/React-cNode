@@ -1,7 +1,7 @@
 import { createStore,applyMiddleware } from 'redux';
 import {logger} from 'redux-logger';
 import thunk from 'redux-thunk';
-import reducers from './reducers';
+import reducers from './reducers/index';
 const middleware = [ thunk ];
 
 if (process.env.NODE_ENV !== 'production') {   // 开发环境下需要日志

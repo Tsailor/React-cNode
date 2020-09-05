@@ -1,0 +1,16 @@
+.container {
+    border: 1px solid lightsteelblue;
+    padding: 0 10px 20px 10px;
+}
+.container img {
+    width: 80%;
+}
+.header {
+    margin-top: 20px;
+}
+.title {
+    font-size: 24px;
+    font-weight: 500;
+    flex-wrap: wrap;
+    white-space: normal;
+}

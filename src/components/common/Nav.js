@@ -6,7 +6,7 @@ import style from "../../styles/header.module.css";
 function Nav(props){
     let { modeStatus ,handleMenuClick} = props;
     return (
-    <Menu id={style.navMenu} mode={modeStatus} onClick={handleMenuClick ? (e)=>handleMenuClick(e) : ()=>null}>
+    <Menu  id={style.navMenu} mode={modeStatus}  onClick={handleMenuClick ? (e)=>handleMenuClick(e) : ()=>null}>
          {navlists.map((item,index) =>
               <Menu.Item key={index} icon={item.icontype} id={style.navmenuItem}> 
                             <NavLink key={index} exact={item.exact} to={item.path} id={style.navlink}
